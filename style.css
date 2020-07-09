@@ -1,0 +1,440 @@
+/*
+Theme Name: automotiveBlogs
+Author: ananda
+Version: 1.0
+*/
+
+
+/*general layout*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.container {
+    margin-right: auto;
+    /* 1 */
+    margin-left: auto;
+    /* 1 */
+    max-width: 960px;
+    /* 2 */
+    padding-right: 10px;
+    /* 3 */
+    padding-left: 10px;
+    /* 3 */
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*top nav*/
+
+nav {
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul {
+    float: left;
+    margin-right: 60px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 2px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    /* text-transform: uppercase; */
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #0082e6;
+}
+
+
+/*post style*/
+
+
+/*headline*/
+
+.headline div h4 a {
+    color: black;
+    font-size: 2rem;
+}
+
+.headline div a {
+    color: #0082e6;
+}
+
+.card {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.card img {
+    height: auto;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    text-align: justify;
+    padding: 10px 20px;
+}
+
+.card-content h4 a {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.card-content h4 a:hover {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.card-content a.read-more {
+    color: #0082e6;
+}
+
+
+/*normal post*/
+
+.cardd {
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #ddd;
+}
+
+.image {
+    float: left;
+    background: white;
+    width: 25%;
+}
+
+.content {
+    float: left;
+    height: 140px;
+    width: 73%;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.content h4 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+.content h4 a {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.content h4 a:hover {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.content a {
+    color: #0082e6;
+}
+
+
+/*post info*/
+
+p.post-info {
+    font-size: 87%;
+    color: #999;
+    margin: 0.5em;
+}
+
+p.post-info a:link,
+p.post-info a:visited {
+    padding: 0.2em;
+    background-color: #999;
+    color: white;
+}
+
+
+/*page layout*/
+
+.page-card {
+    width: 100%;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 'thumbnail thumbnail' 'title content';
+    grid-gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.grid-thumbnail {
+    padding: 0.5em;
+    grid-area: thumbnail;
+}
+
+.grid-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-title {
+    padding: 0.5em;
+    grid-area: title;
+}
+
+.grid-title h2 {
+    font-size: 2rem;
+}
+
+.grid-content {
+    padding: 0.5em;
+    grid-area: content;
+}
+
+
+/*single*/
+
+.single-card {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.single-card img {
+    width: 100%;
+    height: auto;
+}
+
+.single-card-content {
+    text-align: justify;
+    padding: 10px 20px;
+}
+
+.single-card-content h4 {
+    margin: 5px 0;
+    font-size: 2.5rem;
+}
+
+.single-card-content .paragraph p {
+    line-height: 1.5em;
+}
+
+
+/*page-menu*/
+
+.page-title {
+    margin-bottom: 0.8em;
+    width: 100%;
+    float: left;
+}
+
+.page-title h1 {
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid #999;
+    color: #0082e6;
+    font-size: 3em;
+}
+
+
+/*single related post*/
+
+.single-related-card {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.single-related-card img {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.single-related-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.single-related-card-content {
+    text-align: justify;
+    padding: 10px 20px;
+}
+
+.related-post-title {
+    border-bottom: 1px solid #999;
+    margin-bottom: 0.8em;
+}
+
+.related-post-title h3 {
+    color: #999;
+}
+
+
+/*pagination*/
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3em 0;
+}
+
+.pagination span,
+.pagination a {
+    margin: 0.5em;
+    padding: 0.8em 1em;
+    color: black;
+}
+
+.pagination .next,
+.pagination .prev {
+    margin: 0.5em;
+    padding: 0.8em 1em;
+    background-color: #0082e6;
+    color: white;
+}
+
+.pagination .current {
+    margin: 0.5em;
+    padding: 0.8em 1em;
+    background-color: #0082e6;
+    color: white;
+}
+
+.pagination a:hover {
+    margin: 0.2em;
+    background-color: #ddd;
+}
+
+
+/*site footer*/
+
+footer {
+    padding: 0.2em;
+    display: block;
+    text-align: center;
+    color: #fff;
+    background: #0082e6;
+}
+
+
+/*media queires*/
+
+@media only screen and (max-width: 950px) {
+    /*normal post*/
+    .headline div h4 a {
+        color: black;
+        font-size: 1rem;
+    }
+    .headline div p {
+        font-size: 0.8rem;
+    }
+    .headline div p a {
+        font-size: 0.8rem;
+    }
+    .content h4 a {
+        margin: 5px 0;
+        font-size: 1.2rem;
+        color: black;
+    }
+    .content h4 a:hover {
+        margin: 5px 0;
+        font-size: 0.8rem;
+        color: #999;
+    }
+    .content p {
+        margin: 5px 0;
+        font-size: 0.9rem;
+        color: black;
+    }
+    .content .read-more {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    /*navbar*/
+    nav {
+        height: 50px;
+    }
+    nav ul {
+        margin-right: 50px;
+    }
+    nav ul li {
+        line-height: 50px;
+    }
+    nav ul li a {
+        font-weight: 500;
+        font-size: 15px;
+        padding: 4px 10px;
+        border-radius: 3px;
+    }
+    /*normal post*/
+    .content p {
+        margin: 5px 0;
+        font-size: 0.7rem;
+        color: black;
+    }
+    .content a {
+        margin: 5px 0;
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    /*navbar*/
+    nav {
+        height: 50px;
+    }
+    nav ul {
+        margin-right: 50px;
+    }
+    nav ul li {
+        line-height: 50px;
+    }
+    nav ul li a {
+        font-weight: 500;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+}
